@@ -1,70 +1,151 @@
-# Getting Started with Create React App
+# Rick & Morty Explorer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Rick & Morty Logo](./src/img/rick-morty.png)
 
-## Available Scripts
+## 📖 Descripción
 
-In the project directory, you can run:
+Rick & Morty Explorer es una aplicación web desarrollada con React que permite explorar y conocer los personajes de la famosa serie "Rick & Morty". La aplicación utiliza la [Rick and Morty API](https://rickandmortyapi.com/) para obtener información detallada sobre los personajes de la serie.
 
-### `npm start`
+## ✨ Características
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 🔍 Explorar todos los personajes de Rick & Morty
+- 📊 Visualización de detalles como: especie, estado, episodios en los que aparece
+- 🎨 Interfaz de usuario atractiva y responsiva
+- 🔄 Manejo de estados de carga y errores
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Comenzando
 
-### `npm test`
+### Prerrequisitos
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js (v14.0.0 o superior)
+- npm (v6.0.0 o superior) o yarn
 
-### `npm run build`
+### Instalación
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/tu-usuario/rick-morty-explorer.git
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Navega al directorio del proyecto:
+   ```bash
+   cd rick-morty-explorer
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+   o
+   ```bash
+   yarn install
+   ```
 
-### `npm run eject`
+4. Inicia la aplicación en modo desarrollo:
+   ```bash
+   npm start
+   ```
+   o
+   ```bash
+   yarn dev
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+5. Abre [http://localhost:3000](http://localhost:3000) para ver la aplicación en el navegador.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🏗️ Estructura del Proyecto
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+rick-morty-explorer/
+├── public/
+│   ├── index.html
+│   └── favicon.ico
+├── src/
+│   ├── img/
+│   │   └── rick-morty.png
+│   ├── App.js
+│   ├── App.css
+│   └── index.js
+├── package.json
+└── README.md
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📚 Funcionamiento de la Aplicación
 
-## Learn More
+### App.js
+Componente principal que maneja:
+- Estado de personajes
+- Estado de carga de datos (loading)
+- Estado de errores
+- Lógica para obtener datos de la API
+- Renderizado condicional de la interfaz de usuario
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Flujo de la aplicación:
+1. Al iniciar, se muestra una imagen de Rick & Morty y un botón para buscar personajes.
+2. Al hacer clic en el botón, se realiza una petición a la API de Rick & Morty.
+3. Durante la carga, se muestra un indicador.
+4. Si ocurre un error, se muestra un mensaje de error.
+5. Cuando se cargan los datos correctamente, se muestran los personajes en tarjetas.
+6. Cada tarjeta muestra:
+   - Imagen del personaje
+   - Nombre
+   - Especie (con código de color)
+   - Estado (vivo, muerto, desconocido)
+   - Número de episodios en los que aparece
+7. En la vista de personajes hay una opción para volver a la pantalla inicial.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🛠️ Tecnologías Utilizadas
 
-### Code Splitting
+- [React](https://reactjs.org/) - Biblioteca JavaScript para construir interfaces de usuario
+- [Rick and Morty API](https://rickandmortyapi.com/) - API REST con información sobre Rick and Morty
+- [CSS3](https://developer.mozilla.org/es/docs/Web/CSS) - Para estilos y transiciones
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🔧 Funcionalidades Implementadas
 
-### Analyzing the Bundle Size
+### Manejo de Estado
+La aplicación maneja varios estados para controlar:
+- Carga de datos (loading)
+- Errores en la comunicación con la API
+- Datos de personajes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Diseño Responsivo
+La interfaz se adapta a diferentes tamaños de pantalla mediante el uso de CSS Grid y Media Queries, optimizando la experiencia en dispositivos móviles y de escritorio.
 
-### Making a Progressive Web App
+### Experiencia de Usuario Mejorada
+- Indicadores visuales durante los estados de carga
+- Mensajes de error informativos
+- Códigos de color para estados y especies
+- Efectos de hover en tarjetas y botones
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📱 Compatibilidad
 
-### Advanced Configuration
+La aplicación es compatible con:
+- Chrome (últimas 2 versiones)
+- Firefox (últimas 2 versiones)
+- Safari (últimas 2 versiones)
+- Edge (últimas 2 versiones)
+- Dispositivos móviles con iOS y Android
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🔍 Posibles Mejoras Futuras
 
-### Deployment
+- Implementación de paginación para navegar entre más personajes
+- Búsqueda de personajes por nombre
+- Filtrado por especie, estado, etc.
+- Detalles expandidos para cada personaje
+- Separación en componentes más pequeños y reutilizables
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🤝 Contribuir
 
-### `npm run build` fails to minify
+1. Haz un Fork del proyecto
+2. Crea tu rama de características (`git checkout -b feature/AmazingFeature`)
+3. Realiza tus cambios y haz commit (`git commit -m 'Add some AmazingFeature'`)
+4. Haz Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE.md](LICENSE.md) para más detalles.
+
+## 🙏 Agradecimientos
+
+- [Rick and Morty API](https://rickandmortyapi.com/) por proporcionar los datos
+- La comunidad de React por sus recursos y documentación
